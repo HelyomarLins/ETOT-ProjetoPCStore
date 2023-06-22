@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Store - Monte seu PC com a gente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header id="topo">
+            <picture>
+                <img src="img/pc-store-logo.png" alt="">
+                <h2>PC Store</h2>
+            </picture>
+            <nav id="nav">
+                <button id="btn-mobile">Menu<span id="hamburger"></span></button>
+                <ul id="menu">
+                    <li><a href="#topo">Home</a></li>
+                    <li><a href="#secao03">Orçamento</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <section id="secao01">
+            
+            <div class="banner">
+                <h2>Monte seu PC com a gente </h2>
+                <p>Qualquer tipo de computador, qualquer tipo de configuração, temos as melhores opções para você.</p>
+            </div>
+            <picture>
+                <img src="img/pc-gamer.png" alt="">
+            </picture>
+           
+        </section>
+        <section id="secao02">
+                <img src="img/processador-amd.png" alt="">
+           
+            <div class="lista">
+                <h2>Só os Melhores</h2>
+                <ul>
+                    <li>Processadores</li>
+                    <li>Memórias</li>
+                    <li>Discos</li>
+                    <li>Mouses</li>
+                    <li>Teclados</li>
+                </ul>
+            </div>
+            <img src="img/mouse-gamer.png" alt="">
+            
+        </section>
+        <section id="secao03">
+            <div class="opt01">
+                <h2>Monte o seu pc</h2>
+                <form name="itens" method="get" onsubmit="event.preventDefault(); orcamento()">
+                    <div class="lis01">
+                        <label for="gabinete">Gabinete</label>
+                        <select name="gabinete" id="gabinete" onchange="trocar(gabinete.value)">
+                            <option value="Preto">Preto</option>
+                            <option value="Branco">Branco</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <legend>Processador</legend>
+                        <div>
+                            <input type="radio" name="cpu" id="i3" value="i3" checked>
+                            <label for="i3">Intel i3</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="cpu" id="i5" value="i5">
+                            <label for="i5">Intel i5</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="cpu" id="i7" value="i7">
+                            <label for="i7">Intel i7</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="cpu" id="i9" value="i9">
+                            <label for="i9">Intel i9</label>
+                        </div>
+                    </fieldset>
+                    <div class="lis02">
+                        <label for="memo">Memória</label>
+                        <input type="number" name="memo" id="memo" min="0" max="1092" step="4" maxlength="5" ><span>GB</span>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Calcular"></input>
+                    </div>
+                </form>
+            </div>
+            <div id="gab01">
+                <img id="gabin" src="img/gabinete-preto.png" alt="Gabinete Branco ou Preto">
+            </div>
+            <div class="opt02">
+                <h2>Suas Escolhas</h2>
+                <ul id="res">
+                   <li>Gabinete: <span>preto</span> <span>R$ 300.00</span></li>
+                   <li>CPU: <span>i3</span> <span>R$ 800.00</span></li>
+                   <li>Memória: <span>0</span><span>GB</span></li>
+                   <li>Teclado: <span>R$ 100.00</span></li>
+                   <li>Mouse: <span>R$ 100.00</span></li>
+                   <li>Outros: <span>R$ 500.00</span></li>
+                </ul>
+                <span class="lin"></span>
+                <span id="tot">R$ 0.000,00</span>
+            </div>
+        </section>
+        <footer>
+            <picture>
+              <img src="img/formas-pagamento.png" alt="">
+            </picture>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

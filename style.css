@@ -1,0 +1,641 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+:root{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --azulClaro: #b1c9e6;
+    --azulMedio: #2568ae;
+    --azulEscuro: #183778;
+    --backMain: whitesmoke;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--azulMedio);
+}
+h2 {
+    font-family: 'Righteous', cursive;
+}
+main{
+    background: var(--azulEscuro);
+    width: 60vw;
+    margin: auto;
+    box-shadow: 0px 0px 20px black;
+}
+#topo{
+    width: 100%;
+    background: var(--azulClaro);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: space-between;
+    
+}
+/*ALINHANDO ICONE E LOGO*/
+#topo > picture {
+    display: flex;
+    align-items: center;
+}
+/*TAMANHO DO ICONE*/
+#topo > picture > img{
+    width: 5rem;
+}
+/*TAMANHO DA LOGO*/
+#topo > picture > h2{
+    font-size: 2rem ;
+}
+/*ALINHANDO MENU*/
+#topo > nav #menu{
+    display: flex;
+    list-style: none;
+    gap: 0.3rem;
+}
+
+/*ESTILOS E ANIMAÇÃO MENU*/
+#topo > nav > ul > li > a{
+    display: block;
+    text-decoration: none;
+    color: var(--azulClaro);
+    background: var(--azulMedio);
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}
+#topo > nav > ul > li > a:hover{
+    color: var(--backMain);
+    background: var(--azulEscuro);
+}
+
+/* SEÇÃO BANNER */
+#secao01{
+    background-image: url(img/mesa-wallpaper.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:var(--backMain)
+}
+/* PC GAMER */
+#secao01 > picture > img{
+    width: 18rem;
+}
+/* BANNER PC GAMER */
+#secao01 > .banner{
+   max-width: 300px;
+}
+#secao01 > .banner > h2{
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+#secao01 > .banner > p{
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+/* SEÇÃO BANNER 2 */
+#secao02{
+    background: var(--backMain);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#secao02 > img{
+    max-width: 25%;
+}
+#secao02 > .lista{
+    margin-bottom: 1.5rem;
+    max-width: 40%;
+}
+#secao02 > .lista > ul > li{
+    font-size: 1.3rem;
+}
+#secao02 > .lista > h2{
+    font-weight: 10rem;
+    color: var(--azulMedio);
+    margin-bottom: 0.5rem;
+}
+
+#secao02 > .lista > h2{
+    padding-bottom: 2rem;
+    color: var(--azulEscuro);
+}
+/* SEÇÃO 03 - BACKGROUND E FLEX WRAP */
+#secao03{
+    background-image: url(img/circuito-wallpaper.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+/*TAMANHO DA IMG GABINETE */
+#secao03 #gab01 #gabin{
+    width: 100%;
+}
+/* ESTILO DOS CARDS */
+#secao03 .opt01 {
+    background: var(--backMain);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 15rem;
+}
+#secao03 .opt02{
+background: var(--backMain);
+border-radius: 0.5rem;
+width: 15rem;
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* TITULO DO CARD*/
+#secao03 .opt01 > h2,
+#secao03 .opt02 > h2{
+    color: var(--azulMedio);
+    margin-bottom: 1rem;
+}
+/* LISTA DO CARD02 */
+#secao03 .opt02 #res{
+    margin-left: 1.2remrem;
+}
+
+/* TIPO DE GABINETE*/
+#secao03 .opt01 > form > .lis01{ 
+    margin-bottom: 0.5rem;
+}
+/* TIPO DE PROCESSADOR*/
+#secao03 .opt01 > form >fieldset{
+    width: 80%;
+    border-radius: 0.5rem; 
+    padding: 0.5rem;
+}
+/* ESTILO E ANIMÇÃO BOTÃO CALCUALAR */
+.button > input{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--azulMedio);
+    color: var(--azulClaro);
+    font-size: 1rem;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.button > input:hover{
+    background: var(--azulEscuro);
+    color: var(--backMain);
+}
+/*ESTILIZANDO SPAN VALORES*/
+#secao03 .opt02 #res > li > span{
+    color: rgb(3, 209, 3);
+}
+/*ESTILIZANDO LINHA E TOTAL*/
+#secao03 .lin{
+    margin: 1rem;
+    border: 1px solid var(--azulMedio);
+    width: 80%;
+}
+#secao03 .opt02 #tot{
+    color: rgb(3, 209, 3);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#secao03 .res{
+    padding-left: 1.5rem;
+   
+}
+/* ESTILO FOOTER */
+footer > picture > img{
+    padding: 1.5rem;
+    background: var(--azulEscuro);
+    max-width: 100%;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 770px){
+    #btn-mobile{
+        display:block;
+    }
+    #topo > nav #menu{
+        background-color: var(--azulClaro);
+        display: block;
+        position:absolute;
+        top: 95px;
+        left: 19.3%;
+        width: 61.4%;
+        transition: 0.3s;
+        height: 0;
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #topo #nav #menu > li > a{
+        margin-left: -31px;
+        padding-top: 1.2rem;
+        background-color: var(--azulClaro);
+        color: var(--azulMedio);
+        font-size: 1.5rem;
+        transition: 0.5s;
+        border-bottom: 0.1rem solid var(--azulMedio);
+    }
+    #topo #nav #menu > li > a:hover{
+        color:var(--azulEscuro);
+        font-weight: 500;
+    }
+    #topo .active #menu{
+        height: calc(40vh - 95px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        gap: 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: var(--azulMedio);
+        color: var(--azulClaro);
+        cursor: pointer;
+    }
+    /*ESTILOS ICONE HAMBURGERU*/
+    #hamburger{
+       
+        width: 20px;
+        border-top: 2px solid;
+    }
+    #hamburger::after,#hamburger::before{
+        content:'';
+        display: block;
+        width: 20px;
+        height:2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .4s;
+        position:relative;
+    }
+    /* ESTILIZANDO x DO HAMBURGER*/
+    #topo .active #hamburger{
+        border-top-color: transparent;
+    }
+    #topo .active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #topo .active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    /*SEÇÃO 01 */
+    #secao01 > picture > img{
+        width: 15rem;
+    }
+    /* BANNER PC GAMER */
+    #secao01 > .banner{
+    max-width: 20rem;
+    text-align: center;
+    }
+    #secao01 > .banner > h2{
+        margin: 1rem 0.5rem;
+        font-size: 1.6rem;
+    }
+    /* SEÇÃO BANNER 2 */
+    #secao02{
+        background: var(--backMain);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        #secao02 > img{
+            max-width: 30%;
+        }
+        #secao02 .lista > ul{
+        margin-left: 1rem;
+        margin-top: -2rem;
+        }
+        #secao02 .lista > ul > li{
+            font-size: 1rem;
+        }
+        #secao02 > .lista > h2{
+            font-size: 1.2rem;
+            color: var(--azulMedio);
+        }
+         /* SEÇÃO 03 - BACKGROUND E FLEX WRAP */
+    #secao03{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        
+    }  
+    /*TAMANHO DA IMAGEM GABINETE */
+    #secao03 #gab01{
+        margin: auto;
+    }
+    #secao03 #gab01 #gabin{
+        width: 100%;
+    }
+        /* ESTILO DOS CARDS */
+    #secao03 .opt01 {
+        margin: auto;
+        margin-bottom: 1rem;
+        background: var(--backMain);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        max-width: 18rem;
+    }
+    #secao03 .opt02{
+        margin: auto;
+        margin-top: 1rem;
+        background: var(--backMain);
+        border-radius: 0.5rem;
+        max-width: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* TITULO DO CARD*/
+    #secao03 .opt01 > h2,
+    #secao03 .opt02 > h2{
+        color: var(--azulMedio);
+        margin-bottom: 1rem;
+    }
+    /* LISTA DO CARD02 */
+    #secao03 .opt02 #res{
+        margin-left: 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    
+    
+    /* ESTILO E ANIMÇÃO BOTÃO CALCUALAR */
+    .button > input{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        padding: 0.5rem;
+        background: var(--azulMedio);
+        color: var(--azulClaro);
+        font-size: 1rem;
+        outline: none;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+    .button > input:hover{
+        background: var(--azulEscuro);
+        color: var(--backMain);
+    }
+    /*ESTILIZANDO SPAN VALORES*/
+    #secao03 .opt02 #res > li > span{
+        color: black;
+    }
+    /*ESTILIZANDO LINHA E TOTAL*/
+    #secao03 .lin{
+        margin: 1rem;
+        border: 1px solid var(--azulEscuro);
+        width: 80%;
+    }
+    #secao03 .opt02 #tot{
+        color: green;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+}
+
+/* MEDIA QUERY MOBILE 2 */
+@media (max-width: 600px){
+    #btn-mobile{
+        display:block;
+    }
+    main{
+        background: var(--azulEscuro);
+        width: 90vw;
+        margin: auto;
+        box-shadow: 0px 0px 20px black;
+    }
+    /*TAMANHO DO ICONE*/
+    #topo > picture > img{
+        width: 2.5rem;
+    }
+    /*TAMANHO DA LOGO*/
+    #topo > picture > h2{
+        font-size: 1.5rem ;
+    }
+    /* PC GAMER */
+    #secao01 > picture > img{
+        width: 15rem;
+    }
+    /* BANNER PC GAMER */
+    #secao01 > .banner{
+    max-width: 20rem;
+    text-align: center;
+    }
+    #secao01 > .banner > h2{
+        margin: 1rem 0.5rem;
+        font-size: 1.6rem;
+    }   
+    /* SEÇÃO BANNER 2 */
+    #secao02{
+    background: var(--backMain);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+    #secao02 > img{
+        max-width: 25%;
+    }
+    #secao02 .lista > ul{
+    margin-left: 1rem;
+    margin-top: -2rem;
+    }
+    #secao02 .lista > ul > li{
+        font-size: 1rem;
+    }
+    #secao02 > .lista > h2{
+        font-size: 1.2rem;
+        color: var(--azulMedio);
+    }
+        /* SEÇÃO 03 - BACKGROUND E FLEX WRAP */
+    #secao03{
+        display: flex;
+        width: 100%;
+    } 
+    /*TAMANHO DA IMAGEM GABINETE */
+    #secao03 #gab01{
+        margin: auto;
+    }
+    #secao03 #gab01 #gabin{
+        width: 100%;
+    }  
+        /* ESTILO DOS CARDS */
+    #secao03 .opt01 {
+        margin:auto;
+        margin-bottom: 1rem;
+        background: var(--backMain);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        max-width: 18rem;
+    }
+    #secao03 .opt02{
+        margin: auto;
+        margin-top: 1rem;
+        background: var(--backMain);
+        border-radius: 0.5rem;
+        max-width: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* TITULO DO CARD*/
+    #secao03 .opt01 > h2,
+    #secao03 .opt02 > h2{
+        color: var(--azulMedio);
+        margin-bottom: 1rem;
+    }
+    /* LISTA DO CARD02 */
+    #secao03 .opt02 #res{
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    /* INPUT TIPO DE GABINETE*/
+    #secao03 .opt01 > form > .lis01{ 
+        margin-bottom: 0.5rem;
+        
+    }
+    /* INPUT TIPO DE PROCESSADOR*/
+    #secao03 .opt01 > form >fieldset{
+        width: 80%;
+        border-radius: 0.5rem; 
+        padding: 0.5rem;
+    }
+    /* ESTILO E ANIMÇÃO BOTÃO CALCUALAR */
+    .button > input{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        padding: 0.5rem;
+        background: var(--azulMedio);
+        color: var(--azulClaro);
+        font-size: 1rem;
+        outline: none;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.6s;
+    }
+    .button > input:hover{
+        background: var(--azulEscuro);
+        color: var(--backMain);
+    }
+    /*ESTILIZANDO SPAN VALORES*/
+    #secao03 .opt02 #res > li > span{
+        color: black;
+    }
+    /*ESTILIZANDO LINHA E TOTAL*/
+    #secao03 .lin{
+        margin: 1rem;
+        border: 1px solid var(--azulEscuro);
+        width: 80%;
+    }
+    #secao03 .opt02 #tot{
+        color: green;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1rem 0;
+    }
+    /*ESTILIZANDO MENU HAMBURGER */
+        #topo > nav #menu{
+            background-color: var(--azulClaro);
+            display: block;
+            position:absolute;
+            top: 55px;
+            left: 5%;
+            width: 90%;
+            transition: 0.3s;
+            height: 0;
+            z-index: 1;
+            visibility: hidden;
+            overflow-y: hidden;
+        }
+        #topo #nav #menu > li > a{
+            margin-left: -31px;
+            padding-top: 1.2rem;
+            background-color: var(--azulClaro);
+            color: var(--azulMedio);
+            font-size: 1.5rem;
+            transition: 0.5s;
+            border-bottom: 0.1rem solid var(--azulMedio);
+        }
+        #topo #nav #menu > li > a:hover{
+            color:var(--azulEscuro);
+            font-weight: 500;
+        }
+        #topo .active #menu{
+            height: calc(40vh - 95px);
+            visibility: visible;
+            overflow-y: auto;
+        }
+        #btn-mobile{
+            display: flex;
+            padding: .5rem 1rem;
+            gap: 1rem;
+            font-size: 1rem;
+            border: none;
+            background-color: var(--azulMedio);
+            color: var(--azulClaro);
+            cursor: pointer;
+        }
+        /*ESTILOS ICONE HAMBURGERU*/
+        #hamburger{
+        
+            width: 20px;
+            border-top: 2px solid;
+        }
+        #hamburger::after,#hamburger::before{
+            content:'';
+            display: block;
+            width: 20px;
+            height:2px;
+            background: currentColor;
+            margin-top: 5px;
+            transition: .4s;
+            position:relative;
+        }
+        /* ESTILIZANDO x DO HAMBURGER*/
+        #topo .active #hamburger{
+            border-top-color: transparent;
+        }
+        #topo .active #hamburger::before{
+            transform: rotate(135deg);
+        }
+        #topo .active #hamburger::after{
+            transform: rotate(-135deg);
+            top: -7px;
+        }
+}
+    
